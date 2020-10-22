@@ -10,8 +10,10 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "RobotoMono:size=10" };
-static const char dmenufont[]       = "RobotoMono:size=10";
+static const int focusonwheel       = 0;
+static const char *fonts[]          = { "IBMPlexMono:size=10" };
+static const char dmenufont[]       = "IBMPlexMono:size=10";
+>>>>>>> ce1bba6... Patch folder, layout emojis, dmenu color
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -21,9 +23,9 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class                       instance		title																															tags mask     isfloating   monitor */
+	{ "microsoft teams - preview", NULL,					"Microsoft Teams Notification",     0,            1,           0 },
+	{ "Microsoft Teams - preview", NULL,					"Microsoft Teams Notification",     0,            1,           0 },
 };
 
 /* layout(s) */
@@ -33,9 +35,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "🖽",       tile },    /* first entry is default */
+	{ "🐟",      NULL },    /* no layout function means floating behavior */
+	{ "🧐",      monocle },
 };
 
 /* key definitions */
@@ -50,7 +52,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_fg, "-nf", norm_bg, "-sb", norm_border, "-sf", sel_fg, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", norm_border, "-sf", sel_fg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi" };
 
