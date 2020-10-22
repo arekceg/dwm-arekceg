@@ -13,7 +13,6 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const char *fonts[]          = { "IBMPlexMono:size=10" };
 static const char dmenufont[]       = "IBMPlexMono:size=10";
->>>>>>> ce1bba6... Patch folder, layout emojis, dmenu color
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -35,9 +34,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "🖽",       tile },    /* first entry is default */
-	{ "🐟",      NULL },    /* no layout function means floating behavior */
-	{ "🧐",      monocle },
+	{ "|T|",       tile },    /* first entry is default */
+	{ "~F~",      NULL },    /* no layout function means floating behavior */
+	{ "(M)",      monocle },
 };
 
 /* key definitions */
