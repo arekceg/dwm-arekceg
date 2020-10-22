@@ -1,7 +1,7 @@
 /*See LICENSE file for copyright and license details. */
 
 /* appearance */
-#include "/home/aceglowski/.cache/wal/colors-wal-dwm.h"
+#include "/home/arekceg/.cache/wal/colors-wal-dwm.h"
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -11,8 +11,8 @@ static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "IBMPlexMono:size=10" };
-static const char dmenufont[]       = "IBMPlexMono:size=10";
+static const char *fonts[]          = { "RobotoMono:size=10" };
+static const char dmenufont[]       = "RobotoMono:size=10";
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
