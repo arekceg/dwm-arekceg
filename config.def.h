@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+/*See LICENSE file for copyright and license details. */
 
 /* appearance */
 #include "/home/aceglowski/.cache/wal/colors-wal-dwm.h"
@@ -22,9 +22,8 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                       instance		title																															tags mask     isfloating   monitor */
-	{ "microsoft teams - preview", NULL,					"Microsoft Teams Notification",     0,            1,           0 },
-	{ "Microsoft Teams - preview", NULL,					"Microsoft Teams Notification",     0,            1,           0 },
+	/* class                       instance		                       title																															tags mask     isfloating   monitor */
+	{ "Microsoft Teams - Preview", "microsoft teams - preview",					"Microsoft Teams Notification",     0,            1,           0 },
 };
 
 /* layout(s) */
@@ -54,6 +53,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", norm_fg, "-sb", norm_border, "-sf", sel_fg, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi" };
+static const char *openticketrofi[] = { "open-ticket-rofi.sh" };
 
 #include "movestack.c"
 static Key keys[] = {
@@ -83,6 +83,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = openticketrofi } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
