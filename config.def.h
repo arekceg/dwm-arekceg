@@ -15,7 +15,7 @@ static const char *fonts[]          = { "IBMPlexMono:size=10" };
 static const char dmenufont[]       = "IBMPlexMono:size=10";
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "Z", "X", "C" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -56,6 +56,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi" };
 static const char *openticketrofi[] = { "open-ticket-rofi.sh" };
+static const char *selectscreenlayout[] = { "select-screens.sh" };
 
 #include "movestack.c"
 static Key keys[] = {
@@ -88,6 +89,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = openticketrofi } },
+	{ MODKEY,																						 XK_s,      spawn,          {.v = selectscreenlayout } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -97,6 +99,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_z,                      9)
+	TAGKEYS(                        XK_x,                      10)
+	TAGKEYS(                        XK_c,                      11)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 };
 
