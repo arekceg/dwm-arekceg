@@ -58,6 +58,7 @@ static const char *roficmd[] = { "rofi", "-show", "combi" };
 static const char *openticketrofi[] = { "open-ticket-rofi.sh" };
 static const char *systemstatus[] = { "system-status.sh" };
 static const char *defaultdisplay[] = { "/home/aceglowski/.screenlayout/default.sh" };
+static const char *xlayout[] = { "xlayoutdisplay" };
 
 #include "movestack.c"
 static Key keys[] = {
@@ -91,7 +92,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = openticketrofi } },
 	{ MODKEY,																						 XK_s,      spawn,          {.v = systemstatus } },
-	{ MODKEY|ShiftMask,												 XK_s,      spawn,          {.v = defaultdisplay } },
+	{ MODKEY|ShiftMask,												 XK_s,      spawn,          {.v = xlayout } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
