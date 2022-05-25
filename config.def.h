@@ -16,11 +16,11 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const char *fonts[]          = { "RobotoMono:size=10" };
-static const char dmenufont[]       = "RobotoMono:size=10";
+static const char *fonts[]          = { "FiraMono:size=10" };
+static const char dmenufont[]       = "FiraMono:size=10";
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "Z", "X" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "Z", "X"};
 
 static const Rule rules[] = {
 	/* xprop(1):
