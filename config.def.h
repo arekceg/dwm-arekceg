@@ -27,7 +27,8 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 *
-	* class                       instance		                       title																															tags mask     isfloating   monitor */
+	* class         instance    title				tags mask     isfloating   monitor */
+		{ "copyq",     NULL,       NULL,       0,            1,           -1 },
 		{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 };
 
@@ -59,8 +60,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *roficmd[] = { "rofi", "-show", "combi" };
 static const char *openticketrofi[] = { "otr" };
+static const char *screenshot[] = { "flameshot", "gui", NULL };
 static const char *systemstatuscmd[] = { "system-status" };
-static const char *screenshot[] = { "flameshot", "gui" };
 
 static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",     NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "0", "-5%",     NULL };
